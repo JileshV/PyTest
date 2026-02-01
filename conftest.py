@@ -1,6 +1,6 @@
 import pytest
 
-@pytest.fixture()       #yield_fixture() can also work
+@pytest.fixture(autouse=True)       #yield_fixture() can also work
 def setUp():
     print("Launch browser")
     print("Login")

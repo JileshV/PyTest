@@ -1,6 +1,6 @@
 
-def testAddItemToCart(setUp):
+def testAddItemToCart():
     print("Add item successful")
 
-def testRemoveItemToCart(setUp):
+def testRemoveItemToCart():
     print("Remove item successful")
