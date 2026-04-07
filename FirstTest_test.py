@@ -1,10 +1,10 @@
 import pytest
 
-def testLogin():
+def testLogin(setUp):
     print("Login successful")
 
 @pytest.mark.xfail
-def testLogout():
+def testLogout(setUp):
     print("Logout successful")
     assert False
 
