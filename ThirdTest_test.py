@@ -1,6 +1,6 @@
 import pytest
 
-def testLogin(setUp):
+def testLogin(setUp):       #If used 'autouse=True' is used in 'SetUp' fixture
     print("Login successful")
 
 def testLogout():
