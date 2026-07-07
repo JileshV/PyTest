@@ -1,5 +1,7 @@
 import time
+import allure
 import pytest
+from allure_commons.types import AttachmentType
 
 # def setup_function(function):       #setup_module runs setup before test run and teardown after all tests are run
 #     print("SETUP FUNCTION")
@@ -7,11 +9,12 @@ import pytest
 #     print("TEARDOWN FUNCTION")
 
 @pytest.mark.usefixtures("setup_and_teardown")
-class TestSearch():
+class TestSearch:
     def test_one(self):
         self.driver.get("https://omayo.blogspot.com/")
         time.sleep(5)
         print("Done")
+        allure.attach(self.driver.get_screenshot_as_png(),name="test_one_screenshot",attachment_type=AttachmentType.PNG)
 
     def test_tutorials(self):
         self.driver.get("https://tutorialsninja.com/demo/")
